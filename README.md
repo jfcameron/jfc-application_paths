@@ -2,4 +2,5 @@
 
 ## jfc-application_paths
 
-app paths. See demo/ for usage.
+Creates and provides paths to directories to read write data for a single specific application in a crossplatform way.
+Follows freedesktop layout for POSIX, creates a subdirectory in appdata for windows.
