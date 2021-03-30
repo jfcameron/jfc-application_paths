@@ -29,7 +29,7 @@ namespace jfc
         /// \brief ~/.local/share/appname [on linux]
         const std::filesystem::path &data_dir() const;
 
-        application_paths(const std::string &aApplicationName);
+        application_paths(const std::filesystem::path &aApplicationName);
         
     private:
         std::filesystem::path m_config_dir;
@@ -44,7 +44,7 @@ namespace jfc
 {
     namespace fs = std::filesystem;
 
-    application_paths::application_paths(const std::string &aApplicationName)
+    application_paths::application_paths(const std::filesystem::path &aApplicationName)
     {
 #if defined WIN32
         static const std::string appdata(std::getenv("appdata"));
