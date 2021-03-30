@@ -4,6 +4,7 @@
 #define JFC_APPLICATION_PATHS_H
 
 #include <filesystem>
+#include <string>
 
 ///
 /// \brief: libray for creating and accessing application specific 
@@ -28,7 +29,7 @@ namespace jfc
         /// \brief ~/.local/share/appname [on linux]
         const std::filesystem::path &data_dir() const;
 
-        application_paths(std::string aApplicationName);
+        application_paths(const std::string &aApplicationName);
         
     private:
         std::filesystem::path m_config_dir;

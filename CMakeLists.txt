@@ -10,11 +10,9 @@ option(JFC_BUILD_DEMO "Build the demo" ON)
 option(JFC_BUILD_DOCS "Build documentation" OFF)
 option(JFC_BUILD_TESTS "Build unit tests" ON)
 
-add_subdirectory(thirdparty)
-
 jfc_project(library
     NAME "jfcapplicationpaths"
-    VERSION 0.0
+    VERSION 1.0
     DESCRIPTION "app paths"
     C++_STANDARD 17
     C_STANDARD 90
@@ -23,17 +21,8 @@ jfc_project(library
     PUBLIC_INCLUDE_DIRECTORIES
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 
-    PRIVATE_INCLUDE_DIRECTORIES
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/include
-
     SOURCE_LIST
         ${CMAKE_CURRENT_SOURCE_DIR}/src/stub.cpp
-
-#    LIBRARIES
-#       ${dependencyname_LIBRARIES} 
-
-#    DEPENDENCIES
-#        "example"
 )
 
 if (JFC_BUILD_DEMO)
@@ -47,3 +36,4 @@ endif()
 if (JFC_BUILD_DOCS)
     add_subdirectory(docs)
 endif()
+
