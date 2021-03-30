@@ -4,3 +4,7 @@
 
 Creates and provides paths to directories to read write data for a single specific application in a crossplatform way.
 Follows freedesktop layout for POSIX, creates a subdirectory in appdata for windows.
+
+### usage
+1: add the `include` directory on the root of this repository to your include paths. 2: define #JFC_APPLICATION_PATHS_IMPLEMENTATIONbefore you include the header.
+
