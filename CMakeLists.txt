@@ -25,6 +25,10 @@ jfc_project(library
         ${CMAKE_CURRENT_SOURCE_DIR}/src/stub.cpp
 )
 
+if (NOT ${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
+    target_link_libraries(${PROJECT_NAME} stdc++fs)
+endif()
+
 if (JFC_BUILD_DEMO)
     add_subdirectory(demo)
 endif()
